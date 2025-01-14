@@ -37,7 +37,7 @@ var sortMode = "tipo";
 // setup()
 // ############
 
-d3.json("../data/data.json").then((d) => {
+d3.json("data/data.json").then((d) => {
   data = _.values(d);
   console.log(data);
   draw();
