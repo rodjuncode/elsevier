@@ -1,9 +1,11 @@
 [
     {
      "unidade_sem_espaco":"CBMEG",
+     "fte_atual":44.0,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":14.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -15,6 +17,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":29.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -26,6 +29,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":40.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -37,6 +41,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":41.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -48,6 +53,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":42.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -59,6 +65,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":46.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -70,6 +77,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":48.0,
        "pessoas":[
         {
          "nome_y":"PAULO ARRUDA",
@@ -83,9 +91,11 @@
     },
     {
      "unidade_sem_espaco":"CEPTRO",
+     "fte_atual":130.0,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":5.0,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -103,6 +113,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":13.0,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -120,6 +131,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":33.0,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -137,6 +149,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":36.0,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -154,6 +167,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":45.75,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -171,6 +185,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":59.75,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -188,6 +203,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":91.0,
        "pessoas":[
         {
          "nome_y":"ABOUZAR MIRZAEI PAIAMAN",
@@ -207,9 +223,11 @@
     },
     {
      "unidade_sem_espaco":"FCA",
+     "fte_atual":177.8,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":104.6,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -239,6 +257,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":111.2,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -268,6 +287,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":121.2,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -297,6 +317,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":130.5,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -326,6 +347,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":137.5,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -355,6 +377,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":145.8,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -384,6 +407,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":176.7,
        "pessoas":[
         {
          "nome_y":"WISLEI RIUPER RAMOS OSORIO",
@@ -415,9 +439,11 @@
     },
     {
      "unidade_sem_espaco":"FCF",
+     "fte_atual":36.6,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":21.0,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -435,6 +461,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":27.0,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -452,6 +479,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":31.0,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -469,6 +497,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":35.0,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -486,6 +515,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":37.6,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -503,6 +533,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":35.6,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -520,6 +551,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":34.6,
        "pessoas":[
         {
          "nome_y":"BRUNO DA FONSECA DOS SANTOS",
@@ -539,9 +571,11 @@
     },
     {
      "unidade_sem_espaco":"FCM",
+     "fte_atual":433.3,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":397.8,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -667,6 +701,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":426.6,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -792,6 +827,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":456.8,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -917,6 +953,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":443.9,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -1042,6 +1079,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":440.4,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -1167,6 +1205,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":456.6,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -1292,6 +1331,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":467.3,
        "pessoas":[
         {
          "nome_y":"ANIBAL EUGENIO VERCESI",
@@ -1419,9 +1459,11 @@
     },
     {
      "unidade_sem_espaco":"FEA",
+     "fte_atual":125.0,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":87.6,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -1529,6 +1571,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":105.0,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -1636,6 +1679,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":120.0,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -1743,6 +1787,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":120.0,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -1850,6 +1895,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":124.0,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -1957,6 +2003,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":130.3,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -2064,6 +2111,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":126.0,
        "pessoas":[
         {
          "nome_y":"MARIA ANGELA ALMEIDA MEIRELES PETENATE",
@@ -2173,9 +2221,11 @@
     },
     {
      "unidade_sem_espaco":"FEEC",
+     "fte_atual":162.0,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":129.0,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2247,6 +2297,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":146.0,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2318,6 +2369,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":160.0,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2389,6 +2441,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":157.0,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2460,6 +2513,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":161.0,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2531,6 +2585,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":186.3,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2602,6 +2657,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":193.3,
        "pessoas":[
         {
          "nome_y":"JOSE CLAUDIO GEROMEL",
@@ -2675,9 +2731,11 @@
     },
     {
      "unidade_sem_espaco":"FEM",
+     "fte_atual":132.3,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":101.95,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -2725,6 +2783,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":114.35,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -2772,6 +2831,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":121.65,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -2819,6 +2879,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":122.95,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -2866,6 +2927,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":120.6,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -2913,6 +2975,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":124.6,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -2960,6 +3023,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":132.3,
        "pessoas":[
         {
          "nome_y":"AMAURI GARCIA",
@@ -3009,9 +3073,11 @@
     },
     {
      "unidade_sem_espaco":"FENF",
+     "fte_atual":61.6,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":37.9,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3029,6 +3095,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":38.9,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3046,6 +3113,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":42.5,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3063,6 +3131,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":44.6,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3080,6 +3149,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":45.6,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3097,6 +3167,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":55.2,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3114,6 +3185,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":54.2,
        "pessoas":[
         {
          "nome_y":"EDINEIS DE BRITO GUIRARDELLO",
@@ -3133,9 +3205,11 @@
     },
     {
      "unidade_sem_espaco":"FEQ",
+     "fte_atual":91.2,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":100.5,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3165,6 +3239,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":106.6,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3194,6 +3269,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":114.6,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3223,6 +3299,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":112.6,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3252,6 +3329,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":110.6,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3281,6 +3359,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":101.2,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3310,6 +3389,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":107.6,
        "pessoas":[
         {
          "nome_y":"MARISA MASUMI BEPPU",
@@ -3341,9 +3421,11 @@
     },
     {
      "unidade_sem_espaco":"FOP",
+     "fte_atual":136.4,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":151.0,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3433,6 +3515,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":166.4,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3522,6 +3605,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":181.6,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3611,6 +3695,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":174.0,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3700,6 +3785,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":160.5,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3789,6 +3875,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":151.8,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3878,6 +3965,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":150.6,
        "pessoas":[
         {
          "nome_y":"BRENDA PAULA FIGUEIREDO DE ALMEIDA GOMES",
@@ -3969,9 +4057,11 @@
     },
     {
      "unidade_sem_espaco":"FT",
+     "fte_atual":100.1,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":74.5,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -3983,6 +4073,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":76.7,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -3994,6 +4085,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":81.7,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -4005,6 +4097,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":83.5,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -4016,6 +4109,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":83.4,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -4027,6 +4121,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":88.7,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -4038,6 +4133,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":89.8,
        "pessoas":[
         {
          "nome_y":"GISELA DE ARAGAO UMBUZEIRO",
@@ -4051,9 +4147,11 @@
     },
     {
      "unidade_sem_espaco":"HC",
+     "fte_atual":0.0,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4065,6 +4163,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4076,6 +4175,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4087,6 +4187,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4098,6 +4199,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4109,6 +4211,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4120,6 +4223,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":0.0,
        "pessoas":[
         {
          "nome_y":"BRUNO MONTEIRO TAVARES PEREIRA",
@@ -4133,9 +4237,11 @@
     },
     {
      "unidade_sem_espaco":"IB",
+     "fte_atual":334.5,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":231.1,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4255,6 +4361,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":314.8,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4374,6 +4481,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":376.1,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4493,6 +4601,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":372.1,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4612,6 +4721,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":343.1,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4731,6 +4841,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":328.2,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4850,6 +4961,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":348.1,
        "pessoas":[
         {
          "nome_y":"ANDRE VICTOR LUCCI FREITAS",
@@ -4971,9 +5083,11 @@
     },
     {
      "unidade_sem_espaco":"IC",
+     "fte_atual":99.6,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":66.8,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5021,6 +5135,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":80.5,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5068,6 +5183,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":92.5,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5115,6 +5231,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":95.5,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5162,6 +5279,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":99.8,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5209,6 +5327,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":117.8,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5256,6 +5375,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":119.8,
        "pessoas":[
         {
          "nome_y":"ALEXANDRE XAVIER FALCAO",
@@ -5305,9 +5425,11 @@
     },
     {
      "unidade_sem_espaco":"IFGW",
+     "fte_atual":151.9,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":128.3,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5379,6 +5501,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":140.3,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5450,6 +5573,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":160.0,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5521,6 +5645,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":170.0,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5592,6 +5717,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":165.0,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5663,6 +5789,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":165.3,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5734,6 +5861,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":165.2,
        "pessoas":[
         {
          "nome_y":"Alexandre Sasha Alexandrov",
@@ -5807,9 +5935,11 @@
     },
     {
      "unidade_sem_espaco":"IMECC",
+     "fte_atual":155.2,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":130.3,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -5869,6 +5999,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":142.3,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -5928,6 +6059,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":158.6,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -5987,6 +6119,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":157.9,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -6046,6 +6179,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":158.2,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -6105,6 +6239,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":162.3,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -6164,6 +6299,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":161.7,
        "pessoas":[
         {
          "nome_y":"JOSE MARIO MARTINEZ PEREZ",
@@ -6225,9 +6361,11 @@
     },
     {
      "unidade_sem_espaco":"IQ",
+     "fte_atual":202.9,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":169.0,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -6347,6 +6485,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":193.0,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -6466,6 +6605,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":216.0,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -6585,6 +6725,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":211.0,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -6704,6 +6845,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":196.0,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -6823,6 +6965,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":204.0,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -6942,6 +7085,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":207.5,
        "pessoas":[
         {
          "nome_y":"CATIA CRISTINA CAPELO ORNELAS MEGIATTO",
@@ -7063,9 +7207,11 @@
     },
     {
      "unidade_sem_espaco":"NEPA",
+     "fte_atual":7.0,
      "anos":[
       {
        "ano_aux":2017,
+       "fte":7.0,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",
@@ -7077,6 +7223,7 @@
       },
       {
        "ano_aux":2018,
+       "fte":8.0,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",
@@ -7088,6 +7235,7 @@
       },
       {
        "ano_aux":2019,
+       "fte":9.0,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",
@@ -7099,6 +7247,7 @@
       },
       {
        "ano_aux":2020,
+       "fte":9.0,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",
@@ -7110,6 +7259,7 @@
       },
       {
        "ano_aux":2021,
+       "fte":10.75,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",
@@ -7121,6 +7271,7 @@
       },
       {
        "ano_aux":2022,
+       "fte":14.75,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",
@@ -7132,6 +7283,7 @@
       },
       {
        "ano_aux":2023,
+       "fte":6.75,
        "pessoas":[
         {
          "nome_y":"ALPINA BEGOSSI",

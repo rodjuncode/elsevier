@@ -1,13 +1,13 @@
 const VIS_CONTAINER_ID = "vis";
 
 let CHART_BOX_WIDTH = 600;
-const CHART_BOX_HEIGHT = () => CHART_BOX_WIDTH*1.2;
-const CHART_FRAME_WIDTH = () => CHART_BOX_WIDTH*0.8;
-const CHART_FRAME_HEIGHT = () => CHART_FRAME_WIDTH()*1.15;
-const CHART_BOX_BASE_MARGIN = () => CHART_BOX_WIDTH*.05;
-const CHART_BOX_RADIUS = () => CHART_BOX_WIDTH*.05;
-const CHART_COL_WIDTH = () => CHART_BOX_WIDTH*.1;
-const CHART_COL_HEIGHT = () => CHART_BOX_WIDTH*.036;
+const CHART_BOX_HEIGHT = () => CHART_BOX_WIDTH * 1.2;
+const CHART_FRAME_WIDTH = () => CHART_BOX_WIDTH * 0.8;
+const CHART_FRAME_HEIGHT = () => CHART_FRAME_WIDTH() * 1.15;
+const CHART_BOX_BASE_MARGIN = () => CHART_BOX_WIDTH * 0.05;
+const CHART_BOX_RADIUS = () => CHART_BOX_WIDTH * 0.05;
+const CHART_COL_WIDTH = () => CHART_BOX_WIDTH * 0.1;
+const CHART_COL_HEIGHT = () => CHART_BOX_WIDTH * 0.036;
 
 // ############
 // functions
@@ -21,7 +21,6 @@ const VH = () =>
     window.innerHeight || 0
   ) - 5;
 
-
 const CHART_BOX_WIDTH_WITH_MARGIN = () =>
   CHART_BOX_WIDTH + CHART_BOX_BASE_MARGIN();
 const CHART_BOX_HEIGHT_WITH_MARGIN = () =>
@@ -34,7 +33,7 @@ const CHART_BOX_LEFT_MARGIN = () =>
   Math.ceil((VW() - CHART_BOX_COLS() * CHART_BOX_WIDTH_WITH_MARGIN()) / 2);
 const CHART_BOX_TOP_MARGIN = () => CHART_BOX_BASE_MARGIN();
 
-var data, vis, unidades, anos, pesquisadores;
+var data, vis, unidades, anos, pesquisadores, linhas;
 var sortMode = "tipo";
 
 // ############
@@ -59,9 +58,8 @@ window.addEventListener("resize", draw);
 // ############
 
 function draw() {
-
   if (VW() < 500) {
-    CHART_BOX_WIDTH = VW()*.9;
+    CHART_BOX_WIDTH = VW() * 0.9;
   }
 
   d3.select("body > #" + VIS_CONTAINER_ID + " > *").remove();
@@ -98,15 +96,9 @@ function draw() {
   unidades
     .append("rect")
     .attr("x", (CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2)
-    .attr(
-      "y",
-      (d) => (CHART_BOX_HEIGHT() - CHART_FRAME_HEIGHT()) / 2
-    )
+    .attr("y", (d) => (CHART_BOX_HEIGHT() - CHART_FRAME_HEIGHT()) / 2)
     .attr("width", CHART_FRAME_WIDTH())
-    .attr(
-      "height",
-      CHART_FRAME_HEIGHT()
-    )
+    .attr("height", CHART_FRAME_HEIGHT())
     .attr("rx", CHART_BOX_RADIUS())
     .attr("ry", CHART_BOX_RADIUS())
     .attr("fill", "#fff");
@@ -117,19 +109,127 @@ function draw() {
     .data((d) => d.anos[0].pessoas)
     .join("line")
     .attr("x1", (d) => (CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2)
-    .attr("y1", (d, i) => CHART_COL_HEIGHT() * -i + CHART_FRAME_HEIGHT()*.99)
+    .attr("y1", (d, i) => CHART_COL_HEIGHT() * -i + CHART_FRAME_HEIGHT() * 0.99)
     .attr("x2", (d) => (CHART_BOX_WIDTH + CHART_FRAME_WIDTH()) / 2)
-    .attr("y2", (d, i) => CHART_COL_HEIGHT() * -i + CHART_FRAME_HEIGHT()*.99)
+    .attr("y2", (d, i) => CHART_COL_HEIGHT() * -i + CHART_FRAME_HEIGHT() * 0.99)
     .attr("stroke", "#FF9898")
     .attr("stroke-width", 1)
     .attr("transform", "scale(0,1)");
 
-  // titulo da unidade
+  // tamanho da unidade
+  unidades
+    .append("text")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.115 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .032)
+    .attr("font-size", CHART_BOX_WIDTH*0.025)
+    .attr("font-family", "Archivo Narrow")
+    .text(0);
+
+    unidades
+    .append("text")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.04 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .07)
+    .attr("font-size", CHART_BOX_WIDTH*0.025)
+    .attr("font-family", "Archivo Narrow")
+    .text("Total de Pesquisadores na Unidade");    
+
+    unidades
+    .append("text")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.33 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .032)
+    .attr("font-size", CHART_BOX_WIDTH*0.025)
+    .attr("font-family", "Archivo Narrow")
+    .text(400);    
+
+
+  unidades
+    .append("rect")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.15 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .015)
+    .attr("width", CHART_BOX_WIDTH*.02)
+    .attr("height", CHART_BOX_WIDTH*.02)
+    .attr("fill", "#FF5858");
+
+    unidades
+    .append("rect")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.15 + CHART_BOX_WIDTH*.025 + CHART_BOX_WIDTH*.01 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .015)
+    .attr("width", CHART_BOX_WIDTH*.02)
+    .attr("height", CHART_BOX_WIDTH*.02)
+    .attr("fill", "#999");    
+
+    unidades
+    .append("rect")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.15 + CHART_BOX_WIDTH*.05 + CHART_BOX_WIDTH*.02 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .015)
+    .attr("width", CHART_BOX_WIDTH*.02)
+    .attr("height", CHART_BOX_WIDTH*.02)
+    .attr("fill", "#999");  
+    
+    unidades
+    .append("rect")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.15 + CHART_BOX_WIDTH*.075 + CHART_BOX_WIDTH*.03 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .015)
+    .attr("width", CHART_BOX_WIDTH*.02)
+    .attr("height", CHART_BOX_WIDTH*.02)
+    .attr("fill", "#999");   
+    
+    unidades
+    .append("rect")
+    .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.15 + CHART_BOX_WIDTH*.1 + CHART_BOX_WIDTH*.04 + CHART_BOX_WIDTH*.025)
+    .attr("y", CHART_BOX_WIDTH * .015)
+    .attr("width", CHART_BOX_WIDTH*.02)
+    .attr("height", CHART_BOX_WIDTH*.02)
+    .attr("fill", "#999");      
+    
+
+
+  // unidades
+  //   .append("rect")
+  //   .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.13)
+  //   .attr("y", CHART_BOX_WIDTH * .01)
+  //   .attr("width", CHART_BOX_WIDTH*.015)
+  //   .attr("height", CHART_BOX_WIDTH*.015)
+  //   .attr("fill", "#999");
+
+  //   unidades
+  //   .append("rect")
+  //   .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.13 + CHART_BOX_WIDTH*.03)
+  //   .attr("y", CHART_BOX_WIDTH * .01 - CHART_BOX_WIDTH*.005)
+  //   .attr("width", CHART_BOX_WIDTH*.025)
+  //   .attr("height", CHART_BOX_WIDTH*.025)
+  //   .attr("fill", "#999");
+    
+  //   unidades
+  //   .append("rect")
+  //   .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.13 + CHART_BOX_WIDTH*.075)
+  //   .attr("y", CHART_BOX_WIDTH * .01 - CHART_BOX_WIDTH*.01)
+  //   .attr("width", CHART_BOX_WIDTH*.035)
+  //   .attr("height", CHART_BOX_WIDTH*.035)
+  //   .attr("fill", "#999");     
+
+  //   unidades
+  //   .append("rect")
+  //   .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.13 + CHART_BOX_WIDTH*.132)
+  //   .attr("y", CHART_BOX_WIDTH * .01 - CHART_BOX_WIDTH*.015)
+  //   .attr("width", CHART_BOX_WIDTH*.045)
+  //   .attr("height", CHART_BOX_WIDTH*.045)
+  //   .attr("fill", "#999");     
+
+  //   unidades
+  //   .append("rect")
+  //   .attr("x", CHART_BOX_WIDTH / 2 + CHART_BOX_WIDTH*.13 + CHART_BOX_WIDTH*.2)
+  //   .attr("y", CHART_BOX_WIDTH * .01 - CHART_BOX_WIDTH*.02)
+  //   .attr("width", CHART_BOX_WIDTH*.055)
+  //   .attr("height", CHART_BOX_WIDTH*.055)
+  //   .attr("fill", "#999");    
+
+  // // titulo da unidade
   unidades
     .append("text")
     .attr("x", (CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2)
-    .attr("y", CHART_BOX_WIDTH*0.05)
-    .attr("font-size", CHART_BOX_WIDTH*.1)
+    .attr("y", CHART_BOX_WIDTH * 0.07)
+    .attr("font-size", CHART_BOX_WIDTH * 0.08)
     .attr("font-weight", "bold")
     .attr("font-family", "Archivo")
     .text((d) => d.unidade_sem_espaco);
@@ -146,14 +246,16 @@ function draw() {
         "translate(" +
         ((CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2 +
           (CHART_COL_WIDTH() + i * CHART_COL_WIDTH())) +
-        "," + CHART_FRAME_HEIGHT()*.99 +")"
+        "," +
+        CHART_FRAME_HEIGHT() * 0.99 +
+        ")"
     );
 
   anos
     .append("text")
-    .attr("x", -CHART_BOX_WIDTH*0.03)
-    .attr("y", CHART_COL_WIDTH()*0.75)
-    .attr("font-size", CHART_BOX_WIDTH*.032)
+    .attr("x", -CHART_BOX_WIDTH * 0.03)
+    .attr("y", CHART_COL_WIDTH() * 0.75)
+    .attr("font-size", CHART_BOX_WIDTH * 0.032)
     .attr("font-family", "Archivo Narrow")
     .text((d) => d.ano_aux);
 
@@ -170,23 +272,28 @@ function draw() {
     .attr("transform", (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")")
     .append((d) => {
       if (d.sexo == "F")
-        return document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      if (d.sexo == "M")
         return document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      if (d.sexo == "M")
+        return document.createElementNS("http://www.w3.org/2000/svg", "circle");
     })
-    .attr("r", CHART_BOX_WIDTH*.01)
-    .attr("x", -CHART_BOX_WIDTH*.01)
-    .attr("y", -CHART_BOX_WIDTH*.01)
-    .attr("width", CHART_BOX_WIDTH*.02)
-    .attr("height", CHART_BOX_WIDTH*.02)
+    // .append("rect")
+    .attr("r", CHART_BOX_WIDTH * 0.01)
+    .attr("x", -CHART_BOX_WIDTH * 0.0075)
+    .attr("y", -CHART_BOX_WIDTH * 0.0075)
+    .attr("width", CHART_BOX_WIDTH * 0.015)
+    .attr("height", CHART_BOX_WIDTH * 0.015)
+    .attr("transform", "rotate(45)")
     .attr("fill", (d) =>
-      d.tipo == "Nao participou" ? "none" : (d.tipo == "Career" ? "#FFF" :  "#FF9292")
+      d.tipo == "Nao participou"
+        ? "none"
+        : d.tipo == "Career"
+        ? "#FFF"
+        : "#FF9292"
     )
     .attr("stroke", (d) =>
       d.tipo == "Career" || d.tipo == "Ambos" ? "#444" : "none"
     )
     .attr("stroke-width", 2);
-
 }
 
 function sortResearchers() {
@@ -198,7 +305,10 @@ function sortResearchers() {
       .transition()
       .ease(d3.easeCubicInOut)
       .duration(500)
-      .attr("transform", (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")");
+      .attr(
+        "transform",
+        (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")"
+      );
   } else {
     sortMode = "tipo";
     anos
@@ -207,12 +317,15 @@ function sortResearchers() {
       .transition()
       .ease(d3.easeCubicInOut)
       .duration(500)
-      .attr("transform", (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")");
+      .attr(
+        "transform",
+        (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")"
+      );
   }
 
   linhas
     .transition()
     .ease(d3.easeCubicInOut)
-    .duration(500)
+    .duration(300)
     .attr("transform", sortMode == "tipo" ? "scale(0,1)" : "scale(1,1)");
 }
