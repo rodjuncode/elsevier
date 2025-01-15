@@ -1,10 +1,13 @@
 const VIS_CONTAINER_ID = "vis";
 
-const CHART_BOX_WIDTH = 400;
-const CHART_BOX_HEIGHT = 450;
-const CHART_FRAME_MIN_HEIGHT = 120;
-const CHART_BOX_BASE_MARGIN = 20;
-const CHART_BOX_RADIUS = 20;
+let CHART_BOX_WIDTH = 600;
+const CHART_BOX_HEIGHT = () => CHART_BOX_WIDTH*1.2;
+const CHART_FRAME_WIDTH = () => CHART_BOX_WIDTH*0.8;
+const CHART_FRAME_HEIGHT = () => CHART_FRAME_WIDTH()*1.15;
+const CHART_BOX_BASE_MARGIN = () => CHART_BOX_WIDTH*.05;
+const CHART_BOX_RADIUS = () => CHART_BOX_WIDTH*.05;
+const CHART_COL_WIDTH = () => CHART_BOX_WIDTH*.1;
+const CHART_COL_HEIGHT = () => CHART_BOX_WIDTH*.036;
 
 // ############
 // functions
@@ -18,17 +21,18 @@ const VH = () =>
     window.innerHeight || 0
   ) - 5;
 
+
 const CHART_BOX_WIDTH_WITH_MARGIN = () =>
-  CHART_BOX_WIDTH + CHART_BOX_BASE_MARGIN;
+  CHART_BOX_WIDTH + CHART_BOX_BASE_MARGIN();
 const CHART_BOX_HEIGHT_WITH_MARGIN = () =>
-  CHART_BOX_HEIGHT + CHART_BOX_BASE_MARGIN;
+  CHART_BOX_HEIGHT() + CHART_BOX_BASE_MARGIN();
 
 const CHART_BOX_COLS = () => Math.floor(VW() / CHART_BOX_WIDTH_WITH_MARGIN());
 const CHART_BOX_ROWS = (d) => Math.ceil(d.length / CHART_BOX_COLS());
 
 const CHART_BOX_LEFT_MARGIN = () =>
   Math.ceil((VW() - CHART_BOX_COLS() * CHART_BOX_WIDTH_WITH_MARGIN()) / 2);
-const CHART_BOX_TOP_MARGIN = () => CHART_BOX_BASE_MARGIN;
+const CHART_BOX_TOP_MARGIN = () => CHART_BOX_BASE_MARGIN();
 
 var data, vis, unidades, anos, pesquisadores;
 var sortMode = "tipo";
@@ -37,7 +41,7 @@ var sortMode = "tipo";
 // setup()
 // ############
 
-d3.json("data/data.json").then((d) => {
+d3.json("../data/data.json").then((d) => {
   data = _.values(d);
   console.log(data);
   draw();
@@ -55,6 +59,11 @@ window.addEventListener("resize", draw);
 // ############
 
 function draw() {
+
+  if (VW() < 500) {
+    CHART_BOX_WIDTH = VW()*.9;
+  }
+
   d3.select("body > #" + VIS_CONTAINER_ID + " > *").remove();
 
   const vis = d3
@@ -88,30 +97,41 @@ function draw() {
   // area de fundo para a visualização
   unidades
     .append("rect")
-    .attr("x", 0)
+    .attr("x", (CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2)
     .attr(
       "y",
-      (d) =>
-        CHART_BOX_HEIGHT -
-        d.anos[d.anos.length - 1].pessoas.length * 16 -
-        CHART_FRAME_MIN_HEIGHT
+      (d) => (CHART_BOX_HEIGHT() - CHART_FRAME_HEIGHT()) / 2
     )
-    .attr("width", CHART_BOX_WIDTH)
+    .attr("width", CHART_FRAME_WIDTH())
     .attr(
       "height",
-      (d) =>
-        CHART_FRAME_MIN_HEIGHT + d.anos[d.anos.length - 1].pessoas.length * 16
+      CHART_FRAME_HEIGHT()
     )
-    .attr("rx", CHART_BOX_RADIUS)
-    .attr("ry", CHART_BOX_RADIUS)
+    .attr("rx", CHART_BOX_RADIUS())
+    .attr("ry", CHART_BOX_RADIUS())
     .attr("fill", "#fff");
+
+  // linhas horizontais
+  linhas = unidades
+    .selectAll("line")
+    .data((d) => d.anos[0].pessoas)
+    .join("line")
+    .attr("x1", (d) => (CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2)
+    .attr("y1", (d, i) => CHART_COL_HEIGHT() * -i + CHART_FRAME_HEIGHT()*.99)
+    .attr("x2", (d) => (CHART_BOX_WIDTH + CHART_FRAME_WIDTH()) / 2)
+    .attr("y2", (d, i) => CHART_COL_HEIGHT() * -i + CHART_FRAME_HEIGHT()*.99)
+    .attr("stroke", "#FF9898")
+    .attr("stroke-width", 1)
+    .attr("transform", "scale(0,1)");
 
   // titulo da unidade
   unidades
     .append("text")
-    .attr("x", 0)
-    .attr("y", 20)
-    .attr("font-size", "2em")
+    .attr("x", (CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2)
+    .attr("y", CHART_BOX_WIDTH*0.05)
+    .attr("font-size", CHART_BOX_WIDTH*.1)
+    .attr("font-weight", "bold")
+    .attr("font-family", "Archivo")
     .text((d) => d.unidade_sem_espaco);
 
   // grupo para coluna de anos
@@ -120,23 +140,22 @@ function draw() {
     .data((d) => d.anos)
     .join("g")
     .attr("class", (d) => d.ano_aux)
-    .attr("transform", (d, i) => "translate(" + (50 + i * 50) + ",360)");
+    .attr(
+      "transform",
+      (d, i) =>
+        "translate(" +
+        ((CHART_BOX_WIDTH - CHART_FRAME_WIDTH()) / 2 +
+          (CHART_COL_WIDTH() + i * CHART_COL_WIDTH())) +
+        "," + CHART_FRAME_HEIGHT()*.99 +")"
+    );
 
   anos
     .append("text")
-    .attr("x", -15)
-    .attr("y", 50)
+    .attr("x", -CHART_BOX_WIDTH*0.03)
+    .attr("y", CHART_COL_WIDTH()*0.75)
+    .attr("font-size", CHART_BOX_WIDTH*.032)
+    .attr("font-family", "Archivo Narrow")
     .text((d) => d.ano_aux);
-
-  // // pesquisadores
-  // pesquisadores = anos.selectAll('circle')
-  //     // .data(d => d.pessoas.filter(d => d.tipo != "Nao participou"))
-  //     .data(d => d.pessoas)
-  //     .join('circle')
-  //     .attr('cx', 0)
-  //     .attr('cy', (d, i) => -i*20)
-  //     .attr('r', 7)
-  //     .attr('fill', '#ff0000')
 
   // pesquisadores
   pesquisadores = anos
@@ -148,27 +167,26 @@ function draw() {
     )
     .join("g")
     .attr("class", "pesquisador")
-    .attr("transform", (d, i) => "translate(0," + -i * 16 + ")")
+    .attr("transform", (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")")
     .append((d) => {
       if (d.sexo == "F")
         return document.createElementNS("http://www.w3.org/2000/svg", "circle");
       if (d.sexo == "M")
         return document.createElementNS("http://www.w3.org/2000/svg", "rect");
     })
-    .attr("r", 5)
-    .attr("x", -5)
-    .attr("y", -5)
-    .attr("width", 10)
-    .attr("height", 10)
+    .attr("r", CHART_BOX_WIDTH*.01)
+    .attr("x", -CHART_BOX_WIDTH*.01)
+    .attr("y", -CHART_BOX_WIDTH*.01)
+    .attr("width", CHART_BOX_WIDTH*.02)
+    .attr("height", CHART_BOX_WIDTH*.02)
     .attr("fill", (d) =>
-      d.tipo == "Nao participou" || d.tipo == "Career" ? "none" : "#FF9292"
+      d.tipo == "Nao participou" ? "none" : (d.tipo == "Career" ? "#FFF" :  "#FF9292")
     )
     .attr("stroke", (d) =>
-      d.tipo == "Career" || d.tipo == "Ambos" ? "#000" : "none"
+      d.tipo == "Career" || d.tipo == "Ambos" ? "#444" : "none"
     )
-    .attr("stroke-width", 1);
+    .attr("stroke-width", 2);
 
-  //  sortResearchers();
 }
 
 function sortResearchers() {
@@ -180,7 +198,7 @@ function sortResearchers() {
       .transition()
       .ease(d3.easeCubicInOut)
       .duration(500)
-      .attr("transform", (d, i) => "translate(0," + -i * 16 + ")");
+      .attr("transform", (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")");
   } else {
     sortMode = "tipo";
     anos
@@ -189,28 +207,12 @@ function sortResearchers() {
       .transition()
       .ease(d3.easeCubicInOut)
       .duration(500)
-      .attr("transform", (d, i) => "translate(0," + -i * 16 + ")");
+      .attr("transform", (d, i) => "translate(0," + -i * CHART_COL_HEIGHT() + ")");
   }
-  // console.log('oi')
-  // anos.each(function(d) {
-  //     d3.select(this).selectAll('g.pesquisador')
-  //         .data(d.pessoas.sort((a, b) => d3.ascending(a.tipo, b.tipo)))
-  //         .join('g')
-  //         .transition().ease(d3.easeCubicInOut).duration(500)
-  //         .attr('transform', (d, i) => 'translate(0,' + (-i * 16) + ')');
-  // });
+
+  linhas
+    .transition()
+    .ease(d3.easeCubicInOut)
+    .duration(500)
+    .attr("transform", sortMode == "tipo" ? "scale(0,1)" : "scale(1,1)");
 }
-
-// function switchMode() {
-//     pesquisadores = anos.selectAll('g')
-//         .data(d => d.pessoas.sort((a,b) => d3.ascending(a.tipo,b.tipo)))
-//         .transition().delay(100).duration(2000)
-//         .attr('transform', (d, i) => 'translate(0,' + (-i*16) + ')');
-// }
-
-//https://d3-graph-gallery.com/graph/interactivity_transition.html
-
-// pesquisadores.sort((a,b) => d3.ascending(a.min_ano, b.min_ano))
-// .transition().ease(d3.easeCubicInOut)
-// .duration(500)
-// .attr('transform', (d, i) => 'translate(0,' + (5) + ')')
