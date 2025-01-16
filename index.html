@@ -1,22 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elsevier</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <style>
-        body { background: #d4d4dd; margin: 0; padding: 0;}
-    </style>
-</head>
-<body onclick="sortResearchers()">
-       
-    <div id="vis"></div>    
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <script src="lib/lodash.min.js"></script>
     <script src="lib/d3.min.js"></script>
+
+    <style>
+        /* .hover-shadow-box-animation {
+            display: inline-block;
+            vertical-align: middle;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px transparent;
+            margin: 10px;
+            transition-duration: 0.2s;
+            transition-property: box-shadow, transform;
+        }
+
+        .hover-shadow-box-animation:hover,
+        .hover-shadow-box-animation:focus,
+        .hover-shadow-box-animation:active {
+            box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+            transform: scale(1.3);
+        } */
+
+        /* .shadow {
+            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.8));     
+            transition: filter 1s;  
+        } */
+
+        .shadow {
+            animation: onShadow 0.5s forwards;
+        } 
+
+        @keyframes onShadow {
+            from {
+                filter: none;
+            }
+
+            to {
+                filter: hue-rotate(90deg);     
+            }
+        }
+
+        .pesquisador:hover {
+            cursor: pointer;
+        }
+
+        #tooltip {
+            color: #FFF;
+            font-family: 'Archivo Narrow';
+            background: black;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            opacity: 0.9;
+        }
+    </style>
+
+    <!-- <script src="lib/opentip.min.js"></script>
+    <link href="style/opentip.css" rel="stylesheet" type="text/css" /> -->
+
+    <style>
+        body {
+            background: #d4d4dd;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body onclick="sortResearchers()">
+    <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
+    <div id="vis"></div>
     <script src="main.js"></script>
 </body>
+
 </html>
